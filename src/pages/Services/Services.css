@@ -1,0 +1,108 @@
+/* Unique class names for the "What We Do" section */
+.whatwedo-exclusive-services {
+    font-weight: 500;
+    font-size: 14px;
+    color: #ED1C24;
+}
+
+.whatwedo-heading {
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+}
+
+.whatwedo-heading span {
+    color: #ED1C24;
+}
+
+.whatwedo-underline {
+    width: 120px;
+    height: 5px;
+    background-color: #ED1C24;
+    position: relative;
+}
+
+.whatwedo-underline:before,
+.whatwedo-underline:after {
+    content: '';
+    width: 4px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    background-color: #ED1C24;
+}
+
+.whatwedo-underline:before {
+    right: -12px;
+}
+
+.whatwedo-underline:after {
+    right: -6px;
+}
+
+.whatwedo-description {
+    font-size: 16px;
+    color: #333;
+    padding: 16px 0px 0px;
+}
+
+.whatwedo-service-item {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.whatwedo-service-heading {
+    color: #ED1C24;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.whatwedo-service-description {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.whatwedo-request-quote-btn {
+    margin-top: 10px;
+}
+
+/* Modal and input styles */
+.modal-active {
+    position: relative;
+}
+
+.modal-active::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark background with transparency */
+    z-index: 1040;
+    /* Bootstrap modal z-index */
+}
+
+/* Remove Bootstrap input field focus shadow */
+.whatwedo-input:focus {
+    box-shadow: none;
+    /* Remove the default blue shadow */
+    border-color: #ED1C24;
+    /* Change the border color on focus (optional) */
+}
+
+/* Modal Content Custom Styles */
+.whatwedo-modal-content {
+    border-radius: 10px;
+}
+
+.whatwedo-modal-title {
+    color: #ED1C24;
+}
+
+.whatwedo-submit-btn {
+    margin-top: 15px;
+}

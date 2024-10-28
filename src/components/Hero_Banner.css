@@ -1,0 +1,216 @@
+
+
+
+
+
+/* Base button styles */
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Hero Banner Container with Parallax Effect */
+.hero-banner-container {
+  background-image: url("../assets/bg01.jpg");
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Enables the parallax effect */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.hero-banner-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #1c1941;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1; /* Ensure overlay is behind the content */
+  opacity: 0.7; /* Overlay opacity for darker background */
+}
+
+/* Particles Container */
+.Particles-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Set to desired height */
+  overflow: hidden; /* Prevents particles from overflowing */
+}
+
+/* Hero Content */
+.hero-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Keep content above background and overlay */
+}
+
+/* Parallax Background */
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Text Banner */
+.Text-banner {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.Text-banner h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.Text-banner p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Hero Buttons */
+.hero-btn1, .hero-btn2 {
+  margin-top: 20px;
+  width: 170px;
+  height: 75px;
+  font-size: 18px;
+  margin-left: 15px;
+  font-weight: 500;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Button 1 */
+.hero-btn1 {
+  background-color: #ED1C24;
+  border: none;
+}
+
+.hero-btn1:hover {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+/* Hero Button 2 with sliding animation */
+.hero-btn2 {
+  background-color: transparent;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.hero-btn2:hover {
+  border: 2px solid #ED1C24;
+}
+
+.hero-btn2::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ED1C24;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.hero-btn2:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .hero-btn1, .hero-btn2 {
+    width: 150px;
+    height: 65px;
+    font-size: 16px;
+  }
+
+  .Text-banner h1 {
+    font-size: 50px;
+  }
+
+  .Text-banner p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-btn1, .hero-btn2 {
+    width: 130px;
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .Text-banner h1 {
+    font-size: 40px;
+  }
+
+  .Text-banner p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-btn1, .hero-btn2 {
+    width: 120px;
+    height: 55px;
+    font-size: 13px;
+  }
+
+  .Text-banner h1 {
+    font-size: 35px;
+  }
+
+  .Text-banner p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-btn1, .hero-btn2 {
+    width: 100px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .Text-banner h1 {
+    font-size: 30px;
+  }
+
+  .Text-banner p {
+    font-size: 12px;
+  }
+}
+
+  

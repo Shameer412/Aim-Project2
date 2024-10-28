@@ -1,0 +1,117 @@
+/* General section styles */
+.why-choose-us {
+    padding: 60px 0;
+    background-color: #ECECEC; /* Match background with your design */
+  }
+  
+  .choose-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 50px;
+  }
+  
+  /* Left side image styling */
+  .choose-us-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust max width of the image */
+  }
+  
+  /* Right side content styling */
+  .choose-us-content {
+    max-width: 600px;
+  }
+  
+  .choose-us-content h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .choose-us-highlight {
+    color: #ED1C24; /* Highlighted text color */
+  }
+  
+  .underline {
+    width: 200px;
+    height: 5px;
+    background-color: #ED1C24; /* Red underline */
+    border: none;
+    
+     /* Center the underline under the text */
+     
+  }
+  
+  .choose-us-content p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .choose-us-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .choose-us-image img {
+      max-width: 400px; /* Adjust for smaller screens */
+    }
+  
+    .choose-us-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .choose-us-content p {
+      font-size: 0.9rem;
+    }
+  
+    .underline {
+        margin-left:190px ;
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .choose-us-image img {
+      max-width: 300px;
+    }
+  
+    .choose-us-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .choose-us-content p {
+      font-size: 0.8rem;
+    }
+  
+    .underline {
+        margin-left:100px ;
+      width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .choose-us-image img {
+      max-width: 250px;
+    }
+  
+    .choose-us-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .choose-us-content p {
+      font-size: 0.7rem;
+    }
+  
+    .underline {
+        margin-left:100px ;
+      width: 100px;
+    }
+  }
+  

@@ -1,0 +1,168 @@
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 16px; /* Slim and modern width */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: repeating-linear-gradient(    135deg,    #ED1C24,    #ED1C24 10px,    #ffffff 10px,    #ffffff 20px  );
+  border-radius: 10px;
+  border: 4px solid #1e1e1e;
+  box-shadow: 5px 5px 15px rgba(237, 28, 36, 0.6);
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: repeating-linear-gradient(
+    135deg,
+    #D4001B,
+    #D4001B 10px,
+    #ffffff 10px,
+    #ffffff 20px
+  ); /* Slightly darker red on hover */
+  transform: scale(1.1); /* Enlarge slightly on hover */
+  box-shadow: 0 0 15px rgba(237, 28, 36, 0.9); /* Stronger glowing effect */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #B30016; /* Solid dark red when clicked */
+  box-shadow: 0 0 10px rgba(237, 28, 36, 0.8); /* Stronger shadow when active */
+  border: 2px solid #ffffff; /* Thin white border on active for contrast */
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: medium;
+  scrollbar-color: #ED1C24 #1e1e1e; /* Custom colors for Firefox */
+}
+
+/* Pulse Effect on Hover */
+::-webkit-scrollbar-thumb:hover {
+  animation: pulse 1s infinite; /* Pulse animation on hover */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slight enlargement */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* General Styles */
+body {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  
+}
+
+/* Loader Styles */
+.balls {
+  width: 6em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.balls div {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #ED1C24;
+  transform: translateY(-100%);
+  animation: wave 0.8s ease-in-out alternate infinite;
+}
+
+.balls div:nth-of-type(1) {
+  animation-delay: -0.4s;
+}
+
+.balls div:nth-of-type(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* Page Transition (Fade Animation) */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+
+
+
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #ff00cc 0%, #333399  51%, #ff00cc  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
